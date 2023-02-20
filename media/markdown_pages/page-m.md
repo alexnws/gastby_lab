@@ -8,4 +8,4 @@ lang: "fr"
 
 # L'entrée
 
-![Images non trouvé]("./../media/images/Olfactive.png")
+![A cane non magno sæpe tenetur aper](./../images/cane.jpg)

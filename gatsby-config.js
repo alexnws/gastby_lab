@@ -1,14 +1,27 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Lab ECV 2023`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    // FONT
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
+      },
+    },
+    // FILE SYSTEM
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,13 +32,20 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `content`,
+        path: `${__dirname}/media/content_md`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/media/images`,
       },
     },
-    //Markdown part
+    // Markdonw part
     {
       resolve: `gatsby-transformer-remark`,
-      option: {
+      options: {
         plugins: [
           {
             resolve: `gatsby-remark-images`,
