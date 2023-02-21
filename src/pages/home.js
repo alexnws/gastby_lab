@@ -4,7 +4,7 @@ import { Layout } from "../components/struct/layout.js";
 import { graphql } from "gatsby";
 
 export const Home = ({ data }) => {
-  console.log("data", data.allMarkdownRemark);
+  console.log("data", data);
   return (
     <Layout>
       <h1>Home</h1>

@@ -8,4 +8,4 @@ lang: "fr"
 
 # L'entrée
 
-![A cane non magno sæpe tenetur aper](./../images/cane.jpg)
+![A cane non magno sæpe tenetur aper](./../images/alea.jpg)
